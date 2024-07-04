@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="心理健康资源，帮助您更好地照顾自己"
+    title="支持您的心理健康"
+    subtitle="向内检查对您的心理健康很重要。因此，学会关注你的心理状态——检测日常焦虑、情绪变化或矛盾的感觉——并求助于Mantra的工具和循证实践。"
+
+    image={{
+      src: '/xljk.jpg',
+      alt: 'sm',
+    }}
+
+      <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: '左下角点击试听',
+        },
+      ]}
+      />
+      <figure><audio controls src="/mp3/心理健康.mp3"></audio></figure>
+
+</Layout>

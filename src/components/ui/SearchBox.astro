@@ -1,0 +1,55 @@
+---
+// SearchBox.astro
+---
+
+<div class="search-container">
+  <input type="text" placeholder="搜索..." class="search-input" />
+  <button type="button" class="search-button">搜索</button>
+</div>
+
+<style>
+  .search-container {
+    position: relative; /* 让容器相对定位，以便容纳背景图片 */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 垂直居中搜索框和按钮 */
+    margin-top: 20px; /* 调整顶部间距 */
+    background-image: url('/20240704133527.jpg'); /* 背景图片路径 */
+    background-size: cover; /* 背景图片铺满容器 */
+    background-position: center center; /* 背景图片居中 */
+    padding: 300px; /* 调整内边距，确保背景图片显示完整 */
+    
+  }
+
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* 调整搜索框宽度 */
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: transparent; /* 确保输入框背景透明，以显示背景图片 */
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #007bff; /* 设置聚焦时的边框颜色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 设置聚焦时的阴影效果 */
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; /* 调整按钮与输入框的间距 */
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+</style>

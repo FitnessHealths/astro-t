@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/LandingLayout2.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import FloatingComponent from '~/components/ui/Information.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import SearchBox from '~/components/ui/SearchBox.astro';
+import Information from '~/components/ui/Information.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import { getPermalink, getBlogPermalink, getAsset } from '~/utils/permalinks';
+const metadata = {
+  title: 'help',
+};
+---
+
+<Layout metadata={metadata}>
+  <SearchBox />
+  <!-- <HeroText tagline="Free Trial" title="免费试用" /> -->
+  <Steps2
+    title="免费获取完整的曼特拉内容体验"
+    subtitle="试用 7 天后，每月收取 45元人民币的费用。可随时取消。"
+    callToAction={{
+      text: 'Start',
+      // href: 
+    }}
+    items={[
+      {
+        title: '访问我们完整的冥想、睡眠声音、瑜伽和健身以及专注音乐库',
+        description: '',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: '每天将新的冥想内容发送到您的手机',
+        description: '',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: '每日励志视频，让您开始新的一天',
+        description: '',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+  />
+  <style>
+    body {
+        text-align: center; /* 将文本内容居中对齐 */
+    }
+    
+    .centered-link {
+        display: inline-block; /* 将链接元素设置为内联块级元素 */
+        padding: 10px 20px; /* 添加内边距 */
+        text-align: center; /* 文本居中对齐 */
+        text-decoration: none; /* 移除链接默认下划线 */
+        border: 2px solid #007bff; /* 边框样式：蓝色实线 */
+        border-radius: 20px; /* 边框圆角半径 */
+        color: #007bff; /* 文本颜色 */
+        transition: background-color 0.3s, color 0.3s; /* 过渡效果 */
+    }
+
+    .centered-link:hover {
+        background-color: #007bff; /* 鼠标悬停时的背景颜色 */
+        color: #ffffff; /* 鼠标悬停时的文本颜色 */
+    }
+</style>
+  <a href="/pricing" class="centered-link">开始</a>
+  <Information />
+</Layout>

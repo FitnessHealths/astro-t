@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="让你的头脑入睡"
+    title="通过睡眠冥想、睡眠音乐等方式入睡"
+    subtitle="Sleep by Mandra旨在为您的就寝时间带来一些轻松。将它视为我们主应用程序中的睡眠应用程序，提供引导式冥想、放松、睡眠音乐、音景和我们广受欢迎的睡眠广播。"
+
+    image={{
+      src: '/sm1.jpg',
+      alt: 'sm',
+    }}
+
+    <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '左下角点击试听',
+      },
+    ]}
+    />
+    <figure><audio controls src="/mp3/睡眠.mp3"></audio></figure>
+
+</Layout>

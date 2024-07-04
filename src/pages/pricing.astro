@@ -1,0 +1,120 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+const metadata = {
+  title: 'Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <HeroText
+    tagline="Pricings"
+    title="Stellar Pricing for Every Journey"
+  />
+
+
+  <Pricing
+    title="Flexible pricing plans"
+    prices={[
+      {
+        title: '免费试用',
+        subtitle: '免费试用7天',
+        price: '0',
+        period: '/ day',
+        callToAction: {
+          target: '_blank',
+          text: 'buy',
+          href: '/payment',
+        },
+      },
+      {
+        title: '连续包月',
+        subtitle: '7 天免费',
+        price: 15,
+        period: '/ Month',
+        callToAction: {
+          target: '_blank',
+          text: 'buy',
+          href: '#',
+        },
+
+      },
+      {
+        title: '连续包年',
+        subtitle: '14 天免费',
+        price: 365,
+        period: '/ year',
+        callToAction: {
+          target: '_blank',
+          text: 'buy',
+          href: '#',
+        },        
+        hasRibbon: true,
+        ribbonTitle: '超值',
+      },
+    ]}
+  />
+
+
+  <Features
+  id="features"
+  tagline="Experience"
+  title="免费获取完整的曼特拉内容体验"
+  items={[
+    {
+      title: '试用 7 天后，每月收取 45元人民币的费用。可随时取消。',
+      icon: 'tabler:brand-tailwind',
+    },
+    {
+      title: '访问我们完整的冥想、睡眠声音、瑜伽和健身以及专注音乐库',
+      icon: 'tabler:components',
+    },
+    {
+      title: '每天将新的冥想内容发送到您的手机',
+      icon: 'tabler:list-check',
+    },
+    {
+      title: '每日励志视频，让您开始新的一天',
+      icon: 'tabler:rocket',
+    },
+  ]}
+/>
+
+
+
+<Features2
+title="支付方式"
+tagline="Payment"
+items={[
+  {
+    title: '微信支付',
+    icon: 'tabler:brand-wechat',
+  },
+  {
+    title: '支付宝支付',
+    icon: 'tabler:brand-alipay',
+  },
+  {
+    title: '银联支付',
+  
+    icon: 'tabler:brand-paypal',
+  },
+]}
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+
+
+
+
+</Layout>

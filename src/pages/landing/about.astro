@@ -1,0 +1,23 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="关于Mantra—"
+    title="一款“新中式”冥想类产品"
+    subtitle="Mantra的使命是为每个人提供终身心理健康支持。瑜伽语音冥想又称曼特拉(Mantra)冥想。梵语词“曼特拉”可以分为两部分，即“曼”(man)和“特拉”(tra)。“曼”的意思是“心灵”。“特拉”的意思是“引开去”。因此，“曼特拉”的意思是能把人的心灵从其种种世俗的思想、忧虑、欲念、精神负担等等引离开去的一组特殊语音。一个人只要把注意力集中在他的瑜伽语音上，就能逐渐超越愚味无知和激情等品质，而处身在善良品质的高度上。从这一步，瑜伽冥想更往深处发展，逐渐演变为完美的禅，而最终地进入入定状态。"
+
+    image={{
+      src: '/gy.png',
+      alt: 'about',
+    }}
+  />
+
+</Layout>

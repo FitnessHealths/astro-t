@@ -1,0 +1,36 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+const metadata = {
+  title: 'Pricings',
+};
+---
+
+<Layout metadata={metadata}>
+
+
+  <Features2
+  title="支付方式"
+  tagline="Payment"
+  items={[
+    {
+      title: '微信支付',
+      icon: 'tabler:brand-wechat',
+    },
+    {
+      title: '支付宝支付',
+      icon: 'tabler:brand-alipay',
+    },
+    {
+      title: '银联支付',
+    
+      icon: 'tabler:brand-paypal',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+
+</Layout>

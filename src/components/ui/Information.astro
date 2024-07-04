@@ -1,0 +1,36 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+---
+
+<div class="floating-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+    </svg>
+  </div>
+  
+  <style>
+    .floating-icon {
+      position: fixed;
+      bottom: 20px; /* 距离底部的距离 */
+      right: 20px; /* 距离右侧的距离 */
+      width: 40px; /* 图标容器的宽度 */
+      height: 40px; /* 图标容器的高度 */
+      background-color: #007bff; /* 图标容器的背景颜色 */
+      color: #fff; /* 图标颜色 */
+      border-radius: 50%; /* 将图标容器设置为圆形 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      z-index: 1000; /* 可选：调整组件在层叠顺序中的位置 */
+    }
+  
+    .floating-icon svg {
+      width: 60%; /* 图标大小 */
+      height: 60%; /* 图标大小 */
+      fill: currentColor; /* 使用当前颜色填充图标 */
+    }
+  </style>
+  

@@ -1,0 +1,23 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="文章和资源"
+    title="Mantra好文共享"
+    subtitle="探索并欣赏数百篇旨在教育和启发读者的文章。无论您的心境或目标如何，都可以随时浏览我们专家提供的有关冥想、正念、心理健康、睡眠和整体健康的文章。"
+
+    image={{
+      src: 'https://tc-1303817403.cos.ap-chengdu.myqcloud.com/2024/07/03/668569240300f.jpg',
+      alt: 'hwfx',
+    }}
+  />
+
+</Layout>

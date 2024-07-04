@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="引导式冥想，帮助您应对生活中更具挑战性的时刻"
+    title="冥想创造简单"
+    subtitle="冥想是一种生活技能。通过使用Mantra的引导式冥想，您可以学会更多地参与您所做的一切。通过练习，冥想的好处会随着时间的推移而体验到，因为你会感觉更清晰、更平静、更善良、更敏锐。"
+
+    image={{
+      src: '/mx1.jpg',
+      alt: 'mx',
+    }}
+
+      <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: '左下角点击试听',
+        },
+      ]}
+    />
+    <figure><audio controls src="/mp3/冥想.mp3"></audio></figure>
+    
+</Layout>

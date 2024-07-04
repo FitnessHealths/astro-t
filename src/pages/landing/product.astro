@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Sales Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="感受正念练习和正念活动的好处"
+    title="用正念提高你的游戏水平"
+    subtitle="正念是一种活在当下，不受干扰的能力，让你全神贯注于当下的任何项目、对话或人。这是一种从冥想中产生的心灵品质。使用不同的正念技巧来提高你在日常生活中的心理游戏水平。"
+
+    image={{
+      src: '/zn1.jpg',
+      alt: 'sm',
+    }}
+
+      <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: '左下角点击试听',
+        },
+      ]}
+      />
+      <figure><audio controls src="/mp3/正念.mp3"></audio></figure>
+
+</Layout>
